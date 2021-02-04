@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/style.css">
+    <title>To Do List Challenge</title>
+</head>
+<body>
+    <img src="#" alt="background" id="bgImg">
+    <header>
+        <div class="header__icon">
+            <!-- hover 빙글빙글 -->
+            <i class="fas fa-dice-d20"></i>
+        </div>
+        <!-- nav를 여는 버튼 -->
+        <div class="header__username">
+            <input autocomplete="off" type="text" id="header__heading" placeholder="Hi! What's your name?" />
+            <h1 class="header__heading">
+                <!-- LucetTin5's TO DO LIST -->
+            </h1>
+        </div>
+        <div class="header__empty"></div>
+        <!-- 타이틀을 받는 인풋 - 타이틀이 있으면 타이틀을 표시 -->
+    </header>
+    <aside>
+        <div class="sidebar">
+            <div class="sidebar__item sidebar__clock">
+                <span id="clock">
+                    <span id="clock__ampm"></span> <span id="clock__hour"></span> <span id="takeSec">:</span> <span id="clock__minutes"></span>
+                </span>
+                <!-- :은 매 초 깜빡거림 -->
+            </div>
+            <div class="sidebar__item sidebar__google">
+                <form action="submit" class="sidebar__google">
+                    <i class="fab fa-google"></i><input autocomplete="off" type="text" id="sidebar__google-search" placeholder=" Google Here." maxlength=255 autocomplete="off"/>
+                </form>
+            </div>            
+            <div class="sidebar__item sidebar__quotes">
+                <span>Random Advice</span>
+                <div id="advice_container">
+                </div>
+            </div>
+            <div class="sidebar__item sidebar__background">
+                <label for="bgImg_selection">Select Image Tag</label>
+                <input autocomplete="off" type="text" id="bgImg_selection" placeholder="Type here">
+            </div>
+        </div>
+        <!-- 넣고싶은것 : 검색창, 날씨, 달력, 배경설정, 랜덤 인용구 -->
+    </aside>
+    <nav>
+        <div class="nav__folders-wrapper">
+            <ul class="nav__folders-ul">
+                <div class="nav__default-folders">
+                    <li class="nav__folders-folder">
+                        <i class="fas fa-calendar-day"></i>Today
+                    </li>
+                    <li class="nav__folders-folder">
+                        <i class="fab fa-weebly"></i>This week
+                    </li>
+                    <li class="nav__folders-folder">
+                        <i class="fab fa-bitbucket"></i>Bucket list
+                    </li>
+                </div>
+                <div class="nav__plus-folders">
+                    <!-- <div class="folder-wrapper">
+                        <li class="nav__folders-folder">
+                            <i class="fas fa-archive"></i>Example List
+                        </li>
+                        <i class="fa fa-trash-alt"></i>
+                    </div> -->
+                </div>
+            </ul>
+            <div class="nav__folders-plus-container">
+                <form action="submit">
+                    <button><i class="far fa-calendar-plus"></i></button>
+                    <input autocomplete="off" type="text" id="nav__folders-plus" placeholder="Add List">
+                </form>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main__header">
+            <h2 class="main__header-heading"></h2>
+        </div>
+        <div class="main__toDos">
+            <div class="main__toDos-plus">
+                <form action="submit">
+                    <input autocomplete="off" type="text" placeholder="Write to Do" id="main__toDos-plus">
+                    <button><i class="fas fa-plus"></i></button>
+                </form>
+            </div>
+            <ul class="main__toDos-ul">
+                <li class="main__toDos-toDo">
+                    <div class="toDo">Eat</div>
+                    <button class="toDo-done">DONE</button>
+                    <button class="toDo-delete">DELETE</button>
+                </li>
+                <li class="main__toDos-toDo">
+                    <div class="toDo">Sleep</div>
+                    <button class="toDo-done">DONE</button>
+                    <button class="toDo-delete">DELETE</button>
+                </li>
+                
+            </ul>
+        </div>
+        <!-- 기본 : 오늘
+        메인타이틀 : 현재 폴더 이름
+        할 일 추가 인풋 - 인풋 버튼
+        등록된 할 일 리스트 - 각각 edit, del 버튼 -->
+    </main>
+    <footer>
+        <div class="footer-empty"></div>
+        <div class="footer-center">
+            <span>
+                <i class="far fa-copyright"></i>&nbsp 2021 LucetTin5 &nbsp&nbsp<a href="https://github.com/lucettin5"><i class="fab fa-github-square"></i></a>
+            </span> 
+        </div>
+        <div class="footer-empty"></div>
+        <!-- github링크? 카피라이트? -->
+    </footer>
+    <script src="scripts/header.js"></script>
+    <script src="scripts/nav.js"></script>
+    <script src="scripts/bgImg.js"></script>
+    <script src="scripts/clock.js"></script>
+    <script src="scripts/quotes.js"></script>
+    <script src="scripts/google.js"></script>
+    <script src="scripts/todo.js"></script>
+</body>
+</html>
+

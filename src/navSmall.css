@@ -1,0 +1,25 @@
+@media screen and (max-width: 768px) {
+	nav {
+		position: absolute;
+		top: 12vh;
+		width: 100%;
+		height: 10vh;
+		background: #000;
+		display: flex;
+		color: #fff;
+	}
+	.nav__folders-wrapper {
+		/* flex-direction: row; */
+	}
+	.nav__folders-ul {
+		height: inherit;
+		width: 100%;
+		background: skyblue;
+	}
+	.nav__folders-folder {
+		margin: 0;
+	}
+	/* nav:hover {
+		height: 20vh;
+	} */
+}

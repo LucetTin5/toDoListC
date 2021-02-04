@@ -1,0 +1,118 @@
+aside {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 15vw;
+	height: 100vh;
+	background: transparent;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;
+	z-index: 3;
+	padding: 1%;
+}
+.sidebar {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+.sidebar__item {
+	height: 15%;
+	margin-bottom: 15%;
+}
+.sidebar__weather {
+	background: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	font-size: 1.5vw;
+}
+.sidebar__google {
+	height: max-content;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	padding-left: 3%;
+}
+.sidebar__google i {
+	cursor: default;
+	background: -webkit-linear-gradient(#4285f4, #ea4335, #fbbc05, #34a853);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+	margin-right: 3%;
+}
+#sidebar__google-search {
+	width: 100%;
+	height: 100%;
+	padding: 3% 2%;
+	font-size: 1.3vw;
+	margin-left: 0.5vw;
+	box-shadow: #4286f427 3px 3px 3px 2px;
+}
+.sidebar__clock {
+	height: 12%;
+	background: transparent;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2vw;
+}
+@keyframes tiktok {
+	from {
+		color: transparent;
+		text-shadow: none;
+	}
+	to {
+		color: inherit;
+	}
+}
+#takeSec {
+	animation: tiktok 1s ease infinite;
+}
+.sidebar__background {
+	position: absolute;
+	bottom: 8vh;
+	border: none;
+	height: 8vh;
+	background: linear-gradient(rgba(0, 0, 0, 0.2), transparent);
+	border-radius: 5px;
+	padding: 2%;
+	margin-bottom: 5%;
+}
+#bgImg_selection {
+	border-radius: 5px;
+	margin-top: 4%;
+	padding-left: 4%;
+	width: 100%;
+}
+.sidebar__quotes {
+	width: 100%;
+	height: 30%;
+	padding: 3% 4%;
+	background: transparent;
+}
+.sidebar__quotes span {
+	font-weight: bold;
+	margin-left: 1vw;
+	font-size: 1.3vw;
+}
+#advice_container {
+	margin-top: 1vh;
+	width: 100%;
+	height: max-content;
+	min-height: 40%;
+	max-height: 70%;
+	overflow-y: auto;
+	font-style: italic;
+	font-size: 1.1vw;
+	padding: 1vh 1vw;
+	box-shadow: rgb(155, 154, 127) 3px 3px 8px -2px;
+}
+@media screen and (max-width: 768px) {
+	aside {
+		display: none;
+	}
+}
