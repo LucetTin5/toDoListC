@@ -1,5 +1,5 @@
 const nav = document.querySelector(".nav__folders-wrapper"),
-    nav_plus = nav.querySelector(".nav__plus-folders"),
+    nav_plus = document.querySelector(".nav__plus-folders"),
     main = document.querySelector(".main__toDos"),
     newFolderWrapper = document.querySelector(".nav__folders-plus-container");
 const toDoTitle = document.querySelector(".main__header-heading"),
@@ -103,7 +103,7 @@ function removeFolder(event) {
     // let toRemove = toDos.filter((obj) => obj.folder === folderName); 
     toDos = toDos.filter((obj) => obj.folder !== folderName);
     saveToDos();
-    const divToRemove = nav_plus.querySelector(`#${folderName}`);
+    const divToRemove = event.target.parentNode;
     nav_plus.removeChild(divToRemove);
 }
 function paintFolder(whisky) {
