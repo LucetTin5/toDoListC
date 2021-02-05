@@ -17,7 +17,7 @@ const toDoDefault = [
     },
     {
         folder: "Bucket list",
-        tasks: ["Grand Canyon", "LOL Master Rank"]
+        tasks: ["Grand Canyon", "LOL LUL"]
     },
     {
         folder: "Example list",
